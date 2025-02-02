@@ -79,7 +79,7 @@ This app uses a pre-trained VGG16-based model to classify facial emotions into o
 - Upload an image and get emotion predictions.
 - Displays confidence scores for each emotion class.
 
-Run the app using ```sh
+Run the app using ```
 streamlit run app.py
 ```
 ## 📜 License
