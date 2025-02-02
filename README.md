@@ -17,7 +17,7 @@ facial_emotion_recognition/
 │-- app.py                  # Streamlit web app for emotion detection
 ```
 
-## 📊 Dataset
+##  Dataset
 The **FER2013 dataset** is used for training and evaluation. It comprises **35,887 grayscale images (48x48 pixels)** of human faces, labeled into seven emotion classes:
 
 - **Angry** 
@@ -122,7 +122,7 @@ streamlit run app.py
 - Upload an image and get emotion predictions.
 - Displays **confidence scores** for each emotion class.
 
-## 📜 License
+##  License
 This project is open-source and available under the **MIT License**.
 
 ---
