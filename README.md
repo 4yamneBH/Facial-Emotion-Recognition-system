@@ -8,10 +8,7 @@ This project implements a **Facial Emotion Recognition** system using **Convolut
 facial_emotion_recognition/
 │-- data/                   # Directory for dataset (train/test images)
 │-- models/                 # Saved trained models
-│-- notebooks/              # Jupyter notebooks for experimentation
-│-- src/                    # Source code for training and evaluation
-│   │-- dataset.py          # Data loading and preprocessing
-│   │-- model.py            # CNN model architecture
+│-- scripts/                 # Source code for training and evaluation
 │   │-- train.py            # Training script
 │   │-- evaluate.py         # Model evaluation
 │   │-- predict.py          # Real-time emotion detection (optional)
