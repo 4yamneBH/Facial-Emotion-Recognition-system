@@ -17,7 +17,12 @@ facial_emotion_recognition/
 ```
 
 ##  Dataset
-We use the **FER2013** dataset from Kaggle, which consists of 35,000+ grayscale images of faces labeled with 7 emotions.
+The FER2013 dataset is used for training and evaluation. It comprises 35,887 grayscale images (48x48 pixels) of human faces, labeled into seven emotion classes.
+
+🔹 Training Set: 80% of the dataset
+🔹 Validation Set: 20% of the dataset
+
+Dataset Source: FER2013 on Kaggle
 
 ### 🔹 Download the Dataset
 Run the following command to download the dataset:
@@ -46,6 +51,26 @@ unzip fer2013.zip -d data/
    ```
 
 ##  Model Architecture
+The project implements a VGG16-based model, fine-tuned for emotion classification.
+
+📌 Key Features:
+✔ Pre-trained VGG16 backbone for feature extraction
+✔ Additional dense layers for classification
+✔ Dropout layers to prevent overfitting
+✔ Adam optimizer and categorical crossentropy loss
+
+Model Summary
+
+```sh
+Python
+model = tf.keras.models.Sequential([
+    vgg16_model,  # Pre-trained VGG16 model
+    layers.Flatten(),
+    layers.Dense(128, activation='relu'),
+    layers.Dropout(0.5),
+    layers.Dense(7, activation='softmax')  # 7 emotion classes
+])
+```
 - Uses a **CNN-based architecture** inspired by **VGG16**
 - Includes **data augmentation** and **dropout layers** to prevent overfitting
 - Optimized with **Adam optimizer** and **categorical cross-entropy loss**
@@ -56,11 +81,18 @@ To train the CNN model, run:
 python src/train.py
 ```
 
-##  Evaluating the Model
-To evaluate the trained model:
-```sh
-python src/evaluate.py
-```
+## Results & Performance
+Model	Validation Accuracy	Training Accuracy
+Custom CNN	~38%	~50%
+VGG16 (Fine-tuned)	~70%	~85%
+🔹 VGG16 outperformed the custom CNN due to its superior feature extraction capabilities.
+🔹 The training loss and validation loss stabilized over epochs, reducing overfitting.
+
+🌟 Features
+✔ Real-time Emotion Detection using images
+✔ User-Friendly Web Interface built with Streamlit
+✔ Improved Accuracy with Transfer Learning
+✔ Robust Preprocessing Pipeline to enhance model performance
 
 ##  Real-Time Emotion Detection 
 To use the model for real-time emotion recognition via webcam:
