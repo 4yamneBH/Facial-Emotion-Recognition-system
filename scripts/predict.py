@@ -2,7 +2,6 @@ import cv2
 import numpy as np
 from tensorflow.keras.models import load_model
 
-# Load model
 model = load_model("models\emotion_model_vgg16.h5")
 labels = ["Angry", "Disgust", "Fear", "Happy", "Neutral", "Sad", "Surprise"]
 
@@ -18,8 +17,8 @@ while True:
         roi = gray[y:y+h, x:x+w]
         roi = cv2.resize(roi, (48, 48))
         roi = roi / 255.0  # Normalize
-        roi = np.expand_dims(roi, axis=0)  # Add batch dimension
-        roi = np.expand_dims(roi, axis=-1)  # Add channel dimension
+        roi = np.expand_dims(roi, axis=0)  
+        roi = np.expand_dims(roi, axis=-1)  
         
         # Convert grayscale to RGB if the model expects 3 channels
         if model.input_shape[-1] == 3:
