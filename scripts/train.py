@@ -46,22 +46,19 @@ test_generator = test_datagen.flow_from_directory(
 # Load Pretrained VGG16 Model
 base_model = VGG16(weights="imagenet", include_top=False, input_shape=(48, 48, 3))
 
-# Freeze Base Model Layers
 for layer in base_model.layers:
     layer.trainable = False  
 
-# Add New Classifier Layers
 x = Flatten()(base_model.output)
 x = Dense(256, activation="relu")(x)
 x = Dropout(0.5)(x)
 x = Dense(7, activation="softmax")(x)  # 7 emotion classes
 
-# Define New Model
 model = Model(inputs=base_model.input, outputs=x)
 
 # Compile Model
 model.compile(
-    optimizer=Adam(learning_rate=0.0001),  # Optimized Learning Rate
+    optimizer=Adam(learning_rate=0.0001),  
     loss='sparse_categorical_crossentropy',
     metrics=['accuracy']
 )
@@ -74,6 +71,5 @@ model.fit(
     batch_size=BATCH_SIZE
 )
 
-# Save Model
 model.save("models/emotion_model_vgg16.h5")
 print("Model training complete and saved!")
