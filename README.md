@@ -54,15 +54,14 @@ unzip fer2013.zip -d data/
 The project implements a VGG16-based model, fine-tuned for emotion classification.
 
 📌 Key Features:
-✔ Pre-trained VGG16 backbone for feature extraction
-✔ Additional dense layers for classification
-✔ Dropout layers to prevent overfitting
-✔ Adam optimizer and categorical crossentropy loss
+ ✔ Pre-trained VGG16 backbone for feature extraction
+ ✔ Additional dense layers for classification
+ ✔ Dropout layers to prevent overfitting
+ ✔ Adam optimizer and categorical crossentropy loss
 
 Model Summary
 
 ```sh
-Python
 model = tf.keras.models.Sequential([
     vgg16_model,  # Pre-trained VGG16 model
     layers.Flatten(),
@@ -82,6 +81,7 @@ python src/train.py
 ```
 
 ## Results & Performance
+Model	Validation Accuracy	Training Accuracy
 Model	Validation Accuracy	Training Accuracy
 Custom CNN	~38%	~50%
 VGG16 (Fine-tuned)	~70%	~85%
