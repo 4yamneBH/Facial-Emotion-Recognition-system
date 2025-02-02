@@ -16,7 +16,7 @@ facial_emotion_recognition/
 │-- README.md               # Project documentation
 ```
 
-## 📥 Dataset
+##  Dataset
 We use the **FER2013** dataset from Kaggle, which consists of 35,000+ grayscale images of faces labeled with 7 emotions.
 
 ### 🔹 Download the Dataset
@@ -45,24 +45,24 @@ unzip fer2013.zip -d data/
    pip install -r requirements.txt
    ```
 
-## 🏗️ Model Architecture
+##  Model Architecture
 - Uses a **CNN-based architecture** inspired by **VGG16**
 - Includes **data augmentation** and **dropout layers** to prevent overfitting
 - Optimized with **Adam optimizer** and **categorical cross-entropy loss**
 
-## 🚀 Training the Model
+## Training the Model
 To train the CNN model, run:
 ```sh
 python src/train.py
 ```
 
-## 📊 Evaluating the Model
+##  Evaluating the Model
 To evaluate the trained model:
 ```sh
 python src/evaluate.py
 ```
 
-## 🎭 Real-Time Emotion Detection 
+##  Real-Time Emotion Detection 
 To use the model for real-time emotion recognition via webcam:
 ```sh
 python src/predict.py
@@ -80,9 +80,9 @@ Run the app using
 ```sh
 streamlit run app.py
 ```
-## 📜 License
+## License
 This project is open-source and available under the **MIT License**.
 
 ---
-💡 **Contributions & Feedback** are welcome! Feel free to open an issue or pull request. 🚀
+💡 **Contributions & Feedback** are welcome! Feel free to open an issue or pull request. 
 
