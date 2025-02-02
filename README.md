@@ -1,6 +1,6 @@
 # Facial Emotion Recognition using CNN
 
-## 📌 Overview
+##  Overview
 This project implements a **Facial Emotion Recognition** system using **Convolutional Neural Networks (CNNs)**. The model classifies human facial expressions into different emotions such as **Happy, Sad, Angry, Surprised, Neutral, Fear, and Disgust**.
 
 ## 📂 Project Structure
@@ -20,13 +20,13 @@ facial_emotion_recognition/
 ## 📊 Dataset
 The **FER2013 dataset** is used for training and evaluation. It comprises **35,887 grayscale images (48x48 pixels)** of human faces, labeled into seven emotion classes:
 
-- **Angry** 😡
-- **Disgust** 🤢
-- **Fear** 😨
-- **Happy** 😃
-- **Neutral** 😐
-- **Sad** 😢
-- **Surprise** 😲
+- **Angry** 
+- **Disgust** 
+- **Fear** 
+- **Happy** 
+- **Neutral**
+- **Sad** 
+- **Surprise** 
 
 ### 🔹 Dataset Structure
 ```
@@ -71,7 +71,7 @@ source env/bin/activate
 pip install -r requirements.txt
 ```
 
-## 🏗 Model Architecture
+##  Model Architecture
 The project implements a **VGG16-based model**, fine-tuned for emotion classification.
 
 ### 🔹 Key Features:
@@ -91,7 +91,7 @@ model = tf.keras.models.Sequential([
 ])
 ```
 
-## 🚀 Training the Model
+##  Training the Model
 Run the following command to train the model:
 ```sh
 python scripts/train.py
@@ -106,12 +106,12 @@ python scripts/train.py
 🔹 **VGG16 significantly outperformed the custom CNN** due to its powerful feature extraction capabilities.  
 🔹 **Training loss and validation loss stabilized**, reducing overfitting.
 
-## 🎭 Real-Time Emotion Detection
+##  Real-Time Emotion Detection
 To use the model for **real-time emotion recognition** via webcam, run:
 ```sh
 python scripts/predict.py
 ```
-
+![preview](./exp.png)
 ## 🌐 Web Application
 A **Streamlit web app** is included for easy emotion recognition using uploaded images.
 ### Run the app using:
@@ -126,5 +126,5 @@ streamlit run app.py
 This project is open-source and available under the **MIT License**.
 
 ---
-💡 **Contributions & Feedback** are welcome! Feel free to open an issue or submit a pull request. 🚀
+💡 **Contributions & Feedback** are welcome! Feel free to open an issue or submit a pull request. 
 
