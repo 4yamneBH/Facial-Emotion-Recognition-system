@@ -41,7 +41,7 @@ unzip fer2013.zip -d data/
 2. **Create a Virtual Environment:**
    ```sh
    python -m venv env
-   source env/bin/activate  # On Windows: env\Scripts\activate
+   env\Scripts\activate  # On MAC OS: source env/bin/activate
    ```
 3. **Install Dependencies:**
    ```sh
@@ -65,7 +65,7 @@ To evaluate the trained model:
 python src/evaluate.py
 ```
 
-## 🎭 Real-Time Emotion Detection (Optional)
+## 🎭 Real-Time Emotion Detection 
 To use the model for real-time emotion recognition via webcam:
 ```sh
 python src/predict.py
@@ -79,7 +79,7 @@ This app uses a pre-trained VGG16-based model to classify facial emotions into o
 - Upload an image and get emotion predictions.
 - Displays confidence scores for each emotion class.
 - 
-Run the app ysing
+Run the app using
 ```sh
 streamlit run app.py
 ```
