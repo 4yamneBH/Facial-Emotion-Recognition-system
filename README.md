@@ -67,7 +67,7 @@ To use the model for real-time emotion recognition via webcam:
 ```sh
 python src/predict.py
 ```
-
+![Logo](./exp.png)
 # Facial Emotion Recognition App
 
 This app uses a pre-trained VGG16-based model to classify facial emotions into one of seven categories: Angry, Disgust, Fear, Happy, Neutral, Sad, or Surprise.
